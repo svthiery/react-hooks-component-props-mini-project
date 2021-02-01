@@ -1,11 +1,20 @@
 import Article from "./Article";
 
-function ArticleList() {
-    // return (
-    //     <main>
+function ArticleList({posts}) {
 
-    //     </main>
-    // )
+    const articleList = posts.map(post => {
+        return <Article 
+        key={post.id}
+        title={post.title}
+        date={post.date}
+        preview={post.preview}
+        />
+    })
+    return (
+        <main>
+            {articleList}
+        </main>
+    )
 };
 
 export default ArticleList;

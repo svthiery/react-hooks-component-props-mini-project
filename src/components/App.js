@@ -16,6 +16,9 @@ function App() {
       image={blogData.image}
       about={blogData.about}
     />
+    <ArticleList 
+      posts={blogData.posts}
+    />
     </div>
   );
 }
